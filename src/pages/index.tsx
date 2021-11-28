@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-
+import { fetchEntries } from 'util/contentful';
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {
@@ -19,7 +19,6 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
         <p className={styles.description}>
           Get started by editing{` `}
           <code className={styles.code}>pages/index.tsx</code>
@@ -72,4 +71,12 @@ export default function Home() {
       </footer>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetchEntries();
+  console.log(res, `test`);
+  return {
+    props: { name: `john` },
+  };
 }

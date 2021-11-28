@@ -27,9 +27,12 @@
     ]
   },
   "dependencies": {
+    "@types/styled-components": "5.1.15",
+    "contentful": "9.1.4",
     "next": "12.0.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "5.3.3"
   },
   "devDependencies": {
     "@commitlint/cli": "15.0.0",
@@ -39,6 +42,7 @@
     "@types/react-dom": "17.0.11",
     "@typescript-eslint/eslint-plugin": "5.4.0",
     "@typescript-eslint/parser": "5.4.0",
+    "babel-plugin-styled-components": "2.0.2",
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.32.0",
